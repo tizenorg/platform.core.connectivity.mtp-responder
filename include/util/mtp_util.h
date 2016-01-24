@@ -18,6 +18,7 @@
 #define _MTP_UTIL_H_
 
 #include <errno.h>
+#include <vconf.h>
 #include "mtp_config.h"
 #include "mtp_datatype.h"
 
@@ -32,11 +33,6 @@
 	"-o -iname '*.mpeg' -o -iname '*.asf' " \
 	"-o -iname '*.wmv' -o -iname '*.avi' -o -iname '*.wma' " \
 	"-o -iname '*.mp3' \\) -mmin -%d >> %s"
-
-#define VCONFKEY_MTP_PREFIX			"db/private/mtp"
-#define VCONFKEY_MTP_SERIAL_NUMBER_STR	VCONFKEY_MTP_PREFIX"/serial_number"
-#define VCONFKEY_MTP_SYNC_PARTNER_STR	VCONFKEY_MTP_PREFIX"/sync_partner"
-#define VCONFKEY_MTP_SYNC_TIME_INT		VCONFKEY_MTP_PREFIX"/sync_time"
 
 #define DBG(format, args...) SLOGD(format, ##args)
 #define ERR(format, args...) SLOGE(format, ##args)
